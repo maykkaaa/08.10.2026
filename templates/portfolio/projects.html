@@ -1,0 +1,53 @@
+{% extends "portfolio/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="text-center md-5">
+    <h2 class="fw-bold">My Projects</h2>
+    <p class="text-muted">Here are some of the projects I've worked on:</p>
+</div>
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+
+    <div class="col">
+        <div class="card h-100">
+            <img src="{% static 'portfolio/images/project1.png' %}"
+                 alt="Project 1">
+
+            <div class="card-body">
+                <h3>Project 1</h3>
+                <p>Description of Project 1.</p>
+            </div>
+
+            <div class="card-footer bg-white border-0 pb-3">
+                <a href="#"
+                   class="btn btn-outline-primary btn-sm">
+                    View Project 1
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card h-100">
+            <img src="{% static 'portfolio/images/project2.png' %}"
+                 alt="Project 2">
+
+            <div class="card-body">
+                <h3>Project 2</h3>
+                <p>Description of Project 2.</p>
+            </div>
+
+            <div class="card-footer">
+                <a href="#"
+                   class="btn btn-outline-primary btn-sm">
+                    View Project 2
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "portfolio/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="text-center md-5">
+    <h2 class="fw-bold">My Skills</h2>
+    <p class="text-muted">Here are some of the skills I've developed:</p>
+</div>
+
+<div class="row">
+    <div class="col-md-6 mb-4">
+        <div class="card shadow-sm border-0 p-4 h-100">
+            <h3 class="text-primary mb-3">Hard Skills</h3>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex justifyfy-content-between align-items-center">
+                    Python(OOP, Basic)
+                    <span class="badge bg-primary rounded-pill">
+                    </span>
+                </li>
+
+                <li class="list-group-item d-flex justifyfy-content-between align-items-center">
+                    Django Framework
+                    <span class="badge bg-primary rounded-pill">
+                    </span>
+                </li>
+
+                <li class="list-group-item d-flex justifyfy-content-between align-items-center">
+                    HTML & CSS
+                    <span class="badge bg-primary rounded-pill">
+                    </span>
+                </li>
+
+                <li class="list-group-item d-flex justifyfy-content-between align-items-center">
+                    Git & GitHub
+                    <span class="badge bg-primary rounded-pill">
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
