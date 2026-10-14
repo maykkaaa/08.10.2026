@@ -1,10 +1,304 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'portfolio/base.html' %}
+{% load static %}
 
-</body>
-</html>
+{% block title %}Майя Черватюк | Developer Portfolio{% endblock %}
+
+{% block content %}
+
+<div class="portfolio-page">
+
+    <section class="hero">
+        <div class="hero-info">
+            <div class="availability">
+                <span class="pulse"></span>
+                JUNIOR DEVELOPER · UKRAINE
+            </div>
+
+            <p class="hero-small">HELLO, WORLD! I'M</p>
+
+            <h1>Майя<br>
+                <span class="gradient-text">Черватюк.</span>
+            </h1>
+
+            <p class="hero-description">
+                Розробляю сайти, створюю проєкти
+                та перетворюю ідеї на код.
+            </p>
+
+            <div class="hero-actions">
+                <a href="{% url 'projects' %}" class="neon-button">
+                    Переглянути проєкти <span>↗</span>
+                </a>
+
+                <a href="mailto:mayachervatyk@gmail.com"
+                   class="text-button">
+                    Зв'язатися →
+                </a>
+            </div>
+
+            <div class="hero-social">
+                <span>PYTHON</span>
+                <span class="separator">/</span>
+                <span>DJANGO</span>
+                <span class="separator">/</span>
+                <span>WEB</span>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+
+            <!-- Твоє фото -->
+            <div class="profile-photo">
+                <img
+                    src="{% static 'images/face.jpg' %}"
+                    alt="Майя Черватюк"
+                >
+            </div>
+
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+
+            <div class="developer-card">
+                <div class="terminal-top">
+                    <div class="terminal-dots">
+                        <i></i><i></i><i></i>
+                    </div>
+                    <span>maya.py</span>
+                    <span>●</span>
+                </div>
+
+                <div class="terminal-code">
+                    <p><span class="line">01</span> <span class="purple">class</span> Developer:</p>
+                    <p><span class="line">02</span> &nbsp; name = <span class="green">"Maya"</span></p>
+                    <p><span class="line">03</span> &nbsp; skills = [</p>
+                    <p><span class="line">04</span> &nbsp; &nbsp; <span class="green">"Python"</span>,</p>
+                    <p><span class="line">05</span> &nbsp; &nbsp; <span class="green">"Django"</span>,</p>
+                    <p><span class="line">06</span> &nbsp; &nbsp; <span class="green">"HTML/CSS"</span></p>
+                    <p><span class="line">07</span> &nbsp; ]</p>
+                    <p><span class="line">08</span> &nbsp; learning = <span class="purple">True</span></p>
+                </div>
+
+                <div class="terminal-footer">
+                    <span>● SYSTEM ONLINE</span>
+                    <span>v1.0.0</span>
+                </div>
+            </div>
+
+            <div class="floating-tag tag-top">
+                <span>✳</span> Creative mind
+            </div>
+
+            <div class="floating-tag tag-bottom">
+                <span>⌘</span> Building ideas
+            </div>
+        </div>
+    </section>
+
+    <div class="ticker">
+        <div class="ticker-track">
+            <span>PYTHON</span> ✳
+            <span>WEB DEVELOPMENT</span> ✳
+            <span>DJANGO</span> ✳
+            <span>GAME DEVELOPMENT</span> ✳
+            <span>PYTHON</span> ✳
+            <span>WEB DEVELOPMENT</span> ✳
+            <span>DJANGO</span> ✳
+            <span>GAME DEVELOPMENT</span> ✳
+        </div>
+    </div>
+
+    <section class="portfolio-section">
+        <div class="section-top">
+            <div>
+                <span class="section-label">01 / A LITTLE ABOUT ME</span>
+                <h2>Хто я<span class="gradient-text">?</span></h2>
+            </div>
+            <div class="section-symbol">✳</div>
+        </div>
+
+        <div class="about-panel">
+            <div class="about-number">01</div>
+
+            <div>
+                <h3>Навчаюсь. Створюю. Розвиваюсь.</h3>
+                <p>
+                    Навчаюся в 11 класі та IT-школі Logika.
+                    Створюю вебсайти й ігри, експериментую
+                    з технологіями та постійно навчаюся нового.
+                </p>
+            </div>
+
+            <div class="about-decoration">M.</div>
+        </div>
+    </section>
+
+    <section class="portfolio-section">
+        <div class="section-top">
+            <div>
+                <span class="section-label">02 / WHAT I CAN DO</span>
+                <h2>Мої <span class="gradient-text">скіли.</span></h2>
+            </div>
+            <span class="side-note">Наведи на картку ↘</span>
+        </div>
+
+        <div class="flip-grid">
+
+            <div class="flip-card">
+                <div class="flip-inner">
+                    <div class="flip-front skill-purple">
+                        <span class="card-index">SKILL_01</span>
+                        <div class="big-symbol">&lt;/&gt;</div>
+                        <h3>Web Development</h3>
+                        <p>HTML · CSS · Bootstrap</p>
+                        <span class="flip-hint">НАВЕСТИ ↗</span>
+                    </div>
+                    <div class="flip-back">
+                        <span class="card-index">01 / WEB</span>
+                        <h3>Веброзробка</h3>
+                        <p>
+                            Створення структури сторінок,
+                            стилізація інтерфейсів та адаптивний дизайн.
+                        </p>
+                        <div class="mini-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-inner">
+                    <div class="flip-front skill-blue">
+                        <span class="card-index">SKILL_02</span>
+                        <div class="big-symbol">Py</div>
+                        <h3>Python</h3>
+                        <p>Logic · Backend · Code</p>
+                        <span class="flip-hint">НАВЕСТИ ↗</span>
+                    </div>
+                    <div class="flip-back">
+                        <span class="card-index">02 / PYTHON</span>
+                        <h3>Програмування</h3>
+                        <p>
+                            Написання програм, робота з логікою
+                            та створення функціональних проєктів.
+                        </p>
+                        <div class="mini-tags">
+                            <span>Python</span>
+                            <span>Django</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-inner">
+                    <div class="flip-front skill-pink">
+                        <span class="card-index">SKILL_03</span>
+                        <div class="big-symbol">✳</div>
+                        <h3>Game Development</h3>
+                        <p>Games · Mechanics · Ideas</p>
+                        <span class="flip-hint">НАВЕСТИ ↗</span>
+                    </div>
+                    <div class="flip-back">
+                        <span class="card-index">03 / GAMES</span>
+                        <h3>Створення ігор</h3>
+                        <p>
+                            Розробка ігрових механік,
+                            робота з логікою та створення власних ігор.
+                        </p>
+                        <div class="mini-tags">
+                            <span>Pygame</span>
+                            <span>Godot</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="portfolio-section">
+        <div class="section-top">
+            <div>
+                <span class="section-label">03 / SELECTED WORKS</span>
+                <h2>Мої <span class="gradient-text">проєкти.</span></h2>
+            </div>
+            <a href="{% url 'projects' %}" class="view-all">
+                Усі проєкти ↗
+            </a>
+        </div>
+
+        <div class="work-grid">
+
+            <a href="{% url 'projects' %}" class="work-card work-one">
+                <div class="work-top">
+                    <span class="work-type">WEB DEVELOPMENT</span>
+                    <span class="work-arrow">↗</span>
+                </div>
+
+                <div class="work-art">
+                    <img
+                        src="{% static 'images/project1.png' %}"
+                        alt="Проєкт NAMELAKA"
+                        class="work-project-image"
+                    >
+                </div>
+
+                <h3>NAMELAKA</h3>
+                <p>Вебпроєкт для компанії</p>
+
+                <div class="work-tags">
+                    <span>Python</span>
+                    <span>Django</span>
+                </div>
+            </a>
+
+            <a href="{% url 'projects' %}" class="work-card work-two">
+                <div class="work-top">
+                    <span class="work-type">GAME DEVELOPMENT</span>
+                    <span class="work-arrow">↗</span>
+                </div>
+
+                <div class="work-art">
+                    <img
+                        src="{% static 'images/project2.png' %}"
+                        alt="Ігровий проєкт"
+                        class="work-project-image"
+                    >
+                </div>
+
+                <h3>Ігрові проєкти</h3>
+                <p>Власні ігри та ігрові механіки</p>
+
+                <div class="work-tags">
+                    <span>Pygame</span>
+                    <span>Godot</span>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <section class="contact-banner">
+        <span class="section-label">04 / GET IN TOUCH</span>
+        <h2>Створимо щось<br><span class="gradient-text">круте разом?</span></h2>
+        <p>Відкрита до нових знайомств і можливостей.</p>
+
+        <a href="mailto:mayachervatyk@gmail.com" class="neon-button">
+            Написати мені ↗
+        </a>
+
+        <div class="contact-glow"></div>
+    </section>
+
+    <div class="portfolio-bottom">
+        <span>MAYA.DEV</span>
+        <span>DESIGNED WITH CURIOSITY ✳</span>
+        <span>© {% now "Y" %}</span>
+    </div>
+
+</div>
+
+{% endblock %}
