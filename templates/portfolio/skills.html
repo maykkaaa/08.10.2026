@@ -1,42 +1,99 @@
-{% extends "portfolio/base.html" %}
+```django
+{% extends 'portfolio/base.html' %}
 {% load static %}
 
+{% block title %}Навички | Maya.dev{% endblock %}
+
 {% block content %}
-<div class="text-center md-5">
-    <h2 class="fw-bold">My Skills</h2>
-    <p class="text-muted">Here are some of the skills I've developed:</p>
-</div>
-
-<div class="row">
-    <div class="col-md-6 mb-4">
-        <div class="card shadow-sm border-0 p-4 h-100">
-            <h3 class="text-primary mb-3">Hard Skills</h3>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item d-flex justifyfy-content-between align-items-center">
-                    Python(OOP, Basic)
-                    <span class="badge bg-primary rounded-pill">
-                    </span>
-                </li>
-
-                <li class="list-group-item d-flex justifyfy-content-between align-items-center">
-                    Django Framework
-                    <span class="badge bg-primary rounded-pill">
-                    </span>
-                </li>
-
-                <li class="list-group-item d-flex justifyfy-content-between align-items-center">
-                    HTML & CSS
-                    <span class="badge bg-primary rounded-pill">
-                    </span>
-                </li>
-
-                <li class="list-group-item d-flex justifyfy-content-between align-items-center">
-                    Git & GitHub
-                    <span class="badge bg-primary rounded-pill">
-                    </span>
-                </li>
-            </ul>
+<div class="portfolio-page">
+    <section class="portfolio-section">
+        <div class="section-top">
+            <div>
+                <span class="section-label">01 / MY TOOLKIT</span>
+                <h2>Мої <span class="gradient-text">навички.</span></h2>
+            </div>
         </div>
-    </div>
+
+        <div class="flip-grid">
+            <div class="flip-card">
+                <div class="flip-inner">
+                    <div class="flip-front skill-purple">
+                        <span class="card-index">SKILL_01</span>
+                        <div class="big-symbol">&lt;/&gt;</div>
+                        <h3>Web Development</h3>
+                        <p>HTML · CSS · Bootstrap</p>
+                    </div>
+                    <div class="flip-back">
+                        <h3>Веброзробка</h3>
+                        <p>Створення сторінок, оформлення інтерфейсів та адаптивний дизайн.</p>
+                        <div class="mini-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-inner">
+                    <div class="flip-front skill-blue">
+                        <span class="card-index">SKILL_02</span>
+                        <div class="big-symbol">Py</div>
+                        <h3>Python & Django</h3>
+                        <p>Backend · Logic · OOP</p>
+                    </div>
+                    <div class="flip-back">
+                        <h3>Програмування</h3>
+                        <p>Робота з логікою програм, представленнями Django, URL-маршрутами та шаблонами.</p>
+                        <div class="mini-tags">
+                            <span>Python</span>
+                            <span>Django</span>
+                            <span>OOP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-inner">
+                    <div class="flip-front skill-pink">
+                        <span class="card-index">SKILL_03</span>
+                        <div class="big-symbol">✳</div>
+                        <h3>Game Development</h3>
+                        <p>Games · Mechanics · Ideas</p>
+                    </div>
+                    <div class="flip-back">
+                        <h3>Створення ігор</h3>
+                        <p>Створення ігрових механік і невеликих ігрових проєктів.</p>
+                        <div class="mini-tags">
+                            <span>Pygame</span>
+                            <span>Godot</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-inner">
+                    <div class="flip-front skill-purple">
+                        <span class="card-index">SKILL_04</span>
+                        <div class="big-symbol">⌘</div>
+                        <h3>Git & GitHub</h3>
+                        <p>Version Control</p>
+                    </div>
+                    <div class="flip-back">
+                        <h3>Контроль версій</h3>
+                        <p>Збереження змін у коді, робота з репозиторіями та завантаження проєктів на GitHub.</p>
+                        <div class="mini-tags">
+                            <span>Git</span>
+                            <span>GitHub</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 {% endblock %}
+```

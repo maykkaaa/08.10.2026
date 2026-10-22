@@ -1,0 +1,45 @@
+```django
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block title %}{{ project.title }} | Maya.dev{% endblock %}
+
+{% block content %}
+<div class="portfolio-page">
+    <section class="portfolio-section project-detail">
+        <a href="{% url 'projects' %}" class="view-all">
+            ← Назад до проєктів
+        </a>
+
+        <div class="section-top">
+            <div>
+                <span class="section-label">{{ project.category }}</span>
+                <h1>{{ project.title }}</h1>
+            </div>
+        </div>
+
+        <div class="project-detail-image">
+            <img src="{% static project.image %}" alt="{{ project.title }}">
+        </div>
+
+        <div class="about-panel project-description">
+            <div>
+                <h3>Про проєкт</h3>
+                <p>{{ project.description }}</p>
+
+                <h3>Технології</h3>
+                <div class="mini-tags">
+                    {% for technology in project.technologies %}
+                        <span>{{ technology }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <a href="{% url 'projects' %}" class="neon-button">
+            Усі проєкти ↗
+        </a>
+    </section>
+</div>
+{% endblock %}
+```

@@ -1,5 +1,7 @@
-{% extends "portfolio/base.html" %}
+{% extends 'portfolio/base.html' %}
 {% load static %}
+
+{% block title %}Мої проєкти | Maya.dev{% endblock %}
 
 {% block content %}
 
@@ -10,66 +12,157 @@
         <div class="section-top">
             <div>
                 <span class="section-label">03 / SELECTED WORKS</span>
-                <h2>Мої <span class="gradient-text">проєкти.</span></h2>
+
+                <h2>
+                    Мої
+                    <span class="gradient-text">проєкти.</span>
+                </h2>
             </div>
         </div>
 
+
         <div class="work-grid">
 
-            <!-- ПРОЄКТ 1 -->
-            <div class="work-card">
+            <!-- LIFECELL -->
+
+            <a
+                href="{% url 'project_detail' 'lifecell' %}"
+                class="work-card work-one"
+            >
 
                 <div class="work-top">
-                    <span class="work-type">WEB DEVELOPMENT</span>
-                    <span class="work-arrow">✦</span>
+                    <span class="work-type">
+                        WEB DEVELOPMENT
+                    </span>
+
+                    <span class="work-arrow">↗</span>
                 </div>
 
+
                 <div class="work-art">
+
                     <img
                         src="{% static 'images/project1.png' %}"
-                        alt="Проєкт NAMELAKA"
+                        alt="Lifecell Portal"
                         class="work-project-image"
                     >
+
                 </div>
 
-                <h3>NAMELAKA</h3>
 
-                <p>Вебпроєкт для компанії</p>
+                <h3>Lifecell Portal</h3>
+
+                <p>
+                    Розробка сучасного вебпорталу Lifecell
+                </p>
+
 
                 <div class="work-tags">
+
                     <span>Python</span>
                     <span>Django</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+
                 </div>
 
-            </div>
+            </a>
 
 
-            <!-- ПРОЄКТ 2 -->
-            <div class="work-card">
+            <!-- VI CLIMATE -->
+
+            <a
+                href="{% url 'project_detail' 'vi-climate' %}"
+                class="work-card work-two"
+            >
 
                 <div class="work-top">
-                    <span class="work-type">GAME DEVELOPMENT</span>
-                    <span class="work-arrow">✦</span>
+
+                    <span class="work-type">
+                        WEB DEVELOPMENT
+                    </span>
+
+                    <span class="work-arrow">↗</span>
+
                 </div>
+
 
                 <div class="work-art">
+
                     <img
                         src="{% static 'images/project2.png' %}"
-                        alt="Ігровий проєкт"
+                        alt="VI Climate"
                         class="work-project-image"
                     >
+
                 </div>
 
-                <h3>Ігрові проєкти</h3>
 
-                <p>Власні ігри та ігрові механіки</p>
+                <h3>VI Climate</h3>
+
+                <p>
+                    Розробка сайту для власного бізнесу
+                </p>
+
 
                 <div class="work-tags">
-                    <span>Pygame</span>
-                    <span>Godot</span>
+
+                    <span>Python</span>
+                    <span>Django</span>
+                    <span>Bootstrap</span>
+
                 </div>
 
-            </div>
+            </a>
+
+
+            <!-- GAMES -->
+
+            <a
+                href="{% url 'project_detail' 'games' %}"
+                class="work-card work-three"
+            >
+
+                <div class="work-top">
+
+                    <span class="work-type">
+                        GAME DEVELOPMENT
+                    </span>
+
+                    <span class="work-arrow">↗</span>
+
+                </div>
+
+
+                <div class="work-art game-art">
+
+                    <div class="game-icon">
+                        🎮
+                    </div>
+
+                    <div class="game-decoration">
+                        PYTHON
+                    </div>
+
+                </div>
+
+
+                <h3>Game Projects</h3>
+
+                <p>
+                    Власні ігри та ігрові механіки
+                </p>
+
+
+                <div class="work-tags">
+
+                    <span>Pygame</span>
+                    <span>Godot</span>
+                    <span>Python</span>
+
+                </div>
+
+            </a>
 
         </div>
 
